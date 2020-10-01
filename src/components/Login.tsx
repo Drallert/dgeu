@@ -1,9 +1,14 @@
 import React from "react";
+import {library} from '@fortawesome/fontawesome-svg-core';
+import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
+import {faUser} from '@fortawesome/free-solid-svg-icons';
 
-interface ILoginProps{
-    userPlaceholder:string;
-    passPlaceholder:string;
+interface ILoginProps { 
+  userPlaceholder: string;
+  passPlaceholder: string;
 }
+
+library.add(faUser);
 
 class Login extends React.Component<ILoginProps, {}> {
   constructor(props: ILoginProps) {
@@ -12,17 +17,34 @@ class Login extends React.Component<ILoginProps, {}> {
 
   public render() {
     return (
-      <div>
-        <form method="post" action="/Login.html">
-          <a href="http://tasvideos.org/Login.html">Login</a>:{" "}
-          <input type="text" name="user" placeholder={this.props.userPlaceholder}/>{" "}
-          <input type="text" name="pass" placeholder={this.props.passPlaceholder}/>
-          <input
-            type="hidden"
-            name="redir"
-            value="http://tasvideos.org/Movies-Wii.html"
-          />
-        </form>
+      <div className="container-fluid">
+        <div className="row justify-content-end">
+          
+          <div className="col-3">
+            <form method="post" action="/Login.html" className="border border-primary rounded bg-secondary">
+              <div className="row">
+              <a className="col-1" href="http://tasvideos.org/Login.html"><FontAwesomeIcon icon={faUser} size="2x"></FontAwesomeIcon></a>{" "}
+              <input
+                className="rounded col-5"
+                type="text"
+                name="user"
+                placeholder={this.props.userPlaceholder}
+              />{" "}
+              <input
+                className="rounded col-5"
+                type="text"
+                name="pass"
+                placeholder={this.props.passPlaceholder}
+              />
+              <input
+                type="hidden"
+                name="redir"
+                value="http://tasvideos.org/Movies-Wii.html"
+              />
+              </div>
+            </form>
+          </div>
+        </div>
 
         <noscript>
           <div style={{ display: "inline" }}>
