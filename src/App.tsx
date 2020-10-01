@@ -2,6 +2,7 @@ import React from 'react';
 import logo from './logo.svg';
 import './App.css';
 import './assets/css/a.css';
+import Login from './components/Login';
 import Movie from './components/Movie';
 
 
@@ -86,18 +87,7 @@ var db = {
 function App() {
   return (
     <div>
-        <li className="selected">
-                                    <div id="tinyloginform">
-                                        <form method="post" action="/Login.html"><a
-                                                href="http://tasvideos.org/Login.html">Login</a>: <input type="text"
-                                                name="user" /><input type="hidden" name="pass" /><input
-                                                type="hidden" name="redir" value="http://tasvideos.org/Movies-Wii.html"/>
-                                        </form>
-                                    </div>
-                                    <noscript>
-                                        <div style={{display: "inline"}}><a href="/Login.html">Login</a></div>
-                                    </noscript>
-                                </li>  
+        <Login userPlaceholder={"Username"} passPlaceholder={"Password"}></Login>
     <p>Total movies: {db.content.length}</p><a id="M2679_1"></a>
    
     <script type="text/javascript">
