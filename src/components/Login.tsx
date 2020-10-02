@@ -2,7 +2,7 @@ import React from "react";
 import {library} from '@fortawesome/fontawesome-svg-core';
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
 import {faUser} from '@fortawesome/free-solid-svg-icons';
-
+import '../assets/css/Login.css';
 interface ILoginProps { 
   userPlaceholder: string;
   passPlaceholder: string;
@@ -17,7 +17,7 @@ class Login extends React.Component<ILoginProps, {}> {
 
   public render() {
     return (
-      <div className="container-fluid">
+      <div className="container-fluid login" >
         <div className="row justify-content-end">
           
           <div className="col-3">
