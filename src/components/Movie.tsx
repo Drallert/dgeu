@@ -186,10 +186,10 @@ class Movie extends React.Component<IMovieProps, IMovieState> {
                     </span>
                   </div>
                   <div className="container">
-                    <div className="row mt-1">
-                      <iframe
-                        width="560"
-                        height="315"
+                    <div className="row mt-1 embed-responsive embed-responsive-16by9">
+                      <iframe className="embed-responsive-item"
+                        width="100%"
+                        height="100%"
                         src={
                           youtubeEmbedLinkBase +
                           this.props.youtubeLinks.slice(-11)
