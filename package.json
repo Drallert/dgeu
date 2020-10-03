@@ -3,6 +3,9 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "^1.2.31",
+    "@fortawesome/free-solid-svg-icons": "^5.15.0",
+    "@fortawesome/react-fontawesome": "^0.1.11",
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.5.0",
     "@testing-library/user-event": "^7.2.1",
@@ -10,16 +13,33 @@
     "@types/node": "^12.12.62",
     "@types/react": "^16.9.49",
     "@types/react-dom": "^16.9.8",
+    "@types/react-redux": "^7.1.9",
+    "@types/reactstrap": "^8.5.1",
+    "@types/redux": "^3.6.0",
+    "@types/sql.js": "^1.0.3",
+    "@types/sqlite3": "^3.1.6",
+    "aws-sdk": "^2.763.0",
+    "fs": "0.0.1-security",
+    "knex": "^0.21.6",
+    "mssql": "^3.3.0",
+    "pg": "^8.3.3",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
+    "react-redux": "^7.2.1",
     "react-scripts": "3.4.3",
+    "reactstrap": "^8.6.0",
+    "redux": "^4.0.5",
+    "sql.js": "^1.3.0",
+    "sqlite": "^4.0.15",
+    "sqlite3": "^5.0.0",
     "typescript": "^3.7.5"
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "debug": "react-scripts debug"
   },
   "eslintConfig": {
     "extends": "react-app"
